@@ -43,7 +43,7 @@ flowchart LR
 | `M0-WP01` | `M0` | `done` | 项目存储护栏与离线 Strict CI | — | — |
 | `M0-WP02` | `M0` | `done` | 工程规划 SSOT、依赖图与追踪矩阵 | M0-WP01 | — |
 | `M0-WP03` | `M0` | `done` | GitHub 私有远端与恢复验证 | M0-WP02 | — |
-| `M1-WP01` | `M1` | `ready` | V1 Scope 四列表与治理合同 | M0-WP03 | — |
+| `M1-WP01` | `M1` | `verification_pending` | V1 Scope 四列表与治理合同 | M0-WP03 | — |
 | `M1-WP02` | `M1` | `planned` | Episode、用户、家庭与数据分类合同 | M1-WP01 | LEGAL/SEC 架构审阅 |
 | `M1-WP03` | `M1` | `planned` | Consent、Provider 与出站信任边界 | M1-WP01 | LEGAL/SEC Provider 准入 |
 | `M1-WP04` | `M1` | `planned` | Event/Command/Receipt Schema Registry v0 | M1-WP02 | — |

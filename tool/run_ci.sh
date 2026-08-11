@@ -28,6 +28,8 @@ fi
 "$dart_cmd" analyze --fatal-warnings --fatal-infos
 "$dart_cmd" run tool/plan_ops.dart check
 "$dart_cmd" run tool/plan_ops.dart self-test
+"$dart_cmd" run tool/scope_ops.dart check
+"$dart_cmd" run tool/scope_ops.dart self-test
 "$dart_cmd" test packages/yunmom_contracts
 "$dart_cmd" test packages/yunmom_domain
 "$flutter_cmd" --no-version-check test packages/yunmom_design_system

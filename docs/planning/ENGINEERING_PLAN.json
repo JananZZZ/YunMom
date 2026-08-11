@@ -2,7 +2,7 @@
   "schema_version": 1,
   "plan_id": "yunmom-engineering-program",
   "program_version": "1.0.0",
-  "updated_at": "2026-08-11T18:36:00+08:00",
+  "updated_at": "2026-08-11T19:02:00+08:00",
   "release_status": "RELEASE_NOT_APPROVED",
   "current_stage": "M1",
   "authority": [
@@ -291,7 +291,7 @@
       "id": "M1-WP01",
       "stage": "M1",
       "title": "V1 Scope 四列表与治理合同",
-      "status": "ready",
+      "status": "verification_pending",
       "scope_class": "required",
       "depends_on": ["M0-WP03"],
       "contract_refs": [
@@ -300,7 +300,13 @@
       ],
       "eng_attachment_refs": ["ENG-00", "ENG-01", "ENG-15"],
       "owner_roles": ["PO", "TECH", "QA"],
-      "path_claims": ["docs/engineering/scope/**", "docs/planning/**"],
+      "path_claims": [
+        "docs/engineering/scope/**",
+        "docs/planning/**",
+        "tool/scope_ops.dart",
+        "tool/run_ci.ps1",
+        "tool/run_ci.sh"
+      ],
       "deliverables": ["Phase 1–6 四列表", "Feature/Skill/Rule/Provider/Field/平台映射"],
       "acceptance": ["Required 无静默删减", "Future/Optional 明确排除"],
       "evidence_refs": [],

@@ -32,6 +32,12 @@ try {
         & $commands.Dart run tool/plan_ops.dart self-test
         if ($LASTEXITCODE -ne 0) { throw "engineering plan self-test failed: $LASTEXITCODE" }
 
+        & $commands.Dart run tool/scope_ops.dart check
+        if ($LASTEXITCODE -ne 0) { throw "V1 scope check failed: $LASTEXITCODE" }
+
+        & $commands.Dart run tool/scope_ops.dart self-test
+        if ($LASTEXITCODE -ne 0) { throw "V1 scope self-test failed: $LASTEXITCODE" }
+
         & $commands.Dart test packages/yunmom_contracts
         if ($LASTEXITCODE -ne 0) { throw "yunmom_contracts tests failed: $LASTEXITCODE" }
 
