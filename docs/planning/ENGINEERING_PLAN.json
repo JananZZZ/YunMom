@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "plan_id": "yunmom-engineering-program",
+  "program_version": "1.0.0",
+  "updated_at": "2026-08-11T17:54:00+08:00",
+  "release_status": "RELEASE_NOT_APPROVED",
+  "current_stage": "M0",
+  "authority": [
+    {
+      "kind": "decision_ledger",
+      "path": "docs/YunMom_Engineering_Contracts_V1.0.0/00_DECISION_LEDGER.md",
+      "sha256": "c75ff8568c92efbe8d8b7f640e851ce6fe8926f21e569846301f74cedbc5971f"
+    },
+    {
+      "kind": "final_readback",
+      "path": "docs/YunMom_Engineering_Contracts_V1.0.0/01_FINAL_READBACK.md",
+      "sha256": "c850a613afce3231ecd99bb06451f64320c2382960923015c02493fca2a1a80b"
+    }
+  ],
+  "visual_input": {
+    "path": "visual/manifests/visual_program.json",
+    "observed_revision": 2,
+    "observed_gate": "G1_YUNMOM_MASTER",
+    "observed_release_status": "not_approved",
+    "sha256": "92899f22475d0af0aa6ea7abcd47838f1f18f1f3026be5206ea77502cd5a1542"
+  },
+  "path_ownership": [
+    {
+      "stream": "engineering",
+      "paths": [
+        "docs/planning/**",
+        "docs/engineering/**",
+        "packages/yunmom_contracts/**",
+        "packages/yunmom_domain/**",
+        "tool/**"
+      ]
+    },
+    {
+      "stream": "visual",
+      "paths": [
+        "visual/**",
+        ".agents/skills/yunmom-art-director/**",
+        "packages/yunmom_design_system/**"
+      ]
+    },
+    {
+      "stream": "shared_single_writer",
+      "paths": [
+        "apps/yunmom_app/**",
+        "README.md",
+        "pubspec.yaml",
+        "pubspec.lock",
+        ".gitignore",
+        "tool/run_ci.ps1",
+        "tool/run_ci.sh"
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "M0",
+      "title": "地基闭环与计划控制面",
+      "depends_on": [],
+      "exit_criteria": [
+        "存储护栏和 Strict CI 通过且 C 盘持续增长不超过 100 MiB",
+        "规划 SSOT、生成视图和 CI 漂移检查生效",
+        "GitHub 私有远端可恢复"
+      ]
+    },
+    {
+      "id": "M1",
+      "title": "范围、架构与 Schema",
+      "depends_on": ["M0"],
+      "exit_criteria": [
+        "Phase 1–6 Required 全量映射到工作包",
+        "91 项决策、ENG-00–15、Owner、验收和证据目标可追踪",
+        "Schema Registry v0 与信任边界冻结"
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "领域写入内核",
+      "depends_on": ["M1"],
+      "exit_criteria": [
+        "CreateEpisode 到 Purge dry-run 的纯 Dart 切片通过",
+        "Replay 确定、失败零写入、重复意图最多一次业务效果"
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "安全本地存储",
+      "depends_on": ["M2"],
+      "exit_criteria": [
+        "事务存储、加密、删除、备份排除和 Archive 合同通过",
+        "崩溃恢复、迁移回滚与残留检查通过"
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Android Local-first 核心",
+      "depends_on": ["M3"],
+      "exit_criteria": [
+        "飞行模式下核心 P0 链完整",
+        "Rule 失败只保守转介且不依赖登录、Gateway 或 Provider"
+      ]
+    },
+    {
+      "id": "M5",
+      "title": "Consent、AI 与远端链",
+      "depends_on": ["M4"],
+      "exit_criteria": [
+        "未授权出站、BYOK 经 Gateway 和正文后台持久化均为零",
+        "Partial 或迟到结果不写入且一次结算"
+      ]
+    },
+    {
+      "id": "M6",
+      "title": "产品功能集成",
+      "depends_on": ["M5"],
+      "exit_criteria": [
+        "Phase 1–6 Required 无静默缺项",
+        "所有 UI 写入只经 Typed Command"
+      ]
+    },
+    {
+      "id": "M7",
+      "title": "视觉、无障碍与 Widget 集成",
+      "depends_on": ["M6"],
+      "exit_criteria": [
+        "只消费批准且 implementation_ready 的 Token/Golden",
+        "P0 Android Journey 在 TalkBack、200% 字号和 Reduce Motion 下完成",
+        "Widget 默认关闭、只读且非 Safety"
+      ]
+    },
+    {
+      "id": "M8",
+      "title": "生产与供应链地基",
+      "depends_on": ["M5"],
+      "exit_criteria": [
+        "构建、SBOM、签名和 Provenance 可追溯",
+        "Kill Switch、回滚、恢复和双事故流程可演练"
+      ]
+    },
+    {
+      "id": "M9",
+      "title": "Android 内测候选",
+      "depends_on": ["M7", "M8"],
+      "exit_criteria": [
+        "Android 设备、删除、Archive、弱网、性能和无障碍出口通过",
+        "未获专业批准能力继续关闭"
+      ]
+    },
+    {
+      "id": "M10",
+      "title": "iOS 等价与公开候选",
+      "depends_on": ["M9"],
+      "exit_criteria": [
+        "Android/iOS Replay、Archive、删除、Widget 和无障碍合同等价",
+        "Critical 和 High 漏洞均为零且全部证据绑定同一 Build"
+      ]
+    },
+    {
+      "id": "M11",
+      "title": "七方 Go/No-Go",
+      "depends_on": ["M10"],
+      "exit_criteria": [
+        "MD、LEGAL、SEC、TECH、QA、ETHICS、PO 对同一 Manifest 全部签署 Go"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-M0-WP01-STRICT-CI",
+      "path": "docs/engineering/SPRINT_0_VERIFICATION.md",
+      "sha256": "04e3cb1de8dbb3e51be188d19dadea5a6a9f2f69494aa5c85fbfe8724f87cba2",
+      "source_commit": "aedd217fd9f899bc9e0fdb0961c8704ab87ef2a1",
+      "build_hash": null,
+      "captured_at": "2026-08-11T17:10:00+08:00",
+      "result": "pass",
+      "data_class": "no_health_content",
+      "reviewer_roles": ["TECH", "QA"]
+    }
+  ],
+  "work_items": [
+    {
+      "id": "M0-WP01",
+      "stage": "M0",
+      "title": "项目存储护栏与离线 Strict CI",
+      "status": "done",
+      "scope_class": "required",
+      "depends_on": [],
+      "contract_refs": ["MAT-001", "EXIT-001"],
+      "eng_attachment_refs": ["ENG-02", "ENG-15"],
+      "owner_roles": ["TECH", "QA"],
+      "path_claims": ["tool/**", "docs/engineering/STORAGE_GUARDRAIL.md"],
+      "deliverables": [
+        "项目缓存与 Android 用户数据收口到非 C 盘路径",
+        "C 盘持续增长硬门与审计记录",
+        "统一 PowerShell/Shell CI 入口"
+      ],
+      "acceptance": [
+        "storage-guard self-test 通过",
+        "Strict CI 四组测试通过",
+        "C 盘持续增长不超过 100 MiB"
+      ],
+      "evidence_refs": ["EV-M0-WP01-STRICT-CI"],
+      "external_gates": []
+    },
+    {
+      "id": "M0-WP02",
+      "stage": "M0",
+      "title": "工程规划 SSOT、依赖图与追踪矩阵",
+      "status": "verification_pending",
+      "scope_class": "required",
+      "depends_on": ["M0-WP01"],
+      "contract_refs": ["SCP-001", "CHG-001", "SIGN-001"],
+      "eng_attachment_refs": ["ENG-00", "ENG-01", "ENG-15"],
+      "owner_roles": ["TECH", "QA", "PO"],
+      "path_claims": [
+        "docs/planning/**",
+        "tool/plan_ops.dart",
+        "tool/run_ci.ps1",
+        "tool/run_ci.sh",
+        "README.md",
+        "docs/engineering/SPRINT_0_VERIFICATION.md"
+      ],
+      "deliverables": [
+        "机器可读 ENGINEERING_PLAN",
+        "自动生成 PROJECT_MAP 和 TRACEABILITY_MATRIX",
+        "CI 漂移与合同引用检查"
+      ],
+      "acceptance": [
+        "所有 91 项决策至少映射一个工作包",
+        "依赖无环且状态迁移合法",
+        "生成视图与 SSOT 字节一致"
+      ],
+      "evidence_refs": [],
+      "external_gates": []
+    },
+    {
+      "id": "M0-WP03",
+      "stage": "M0",
+      "title": "GitHub 私有远端与恢复验证",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M0-WP02"],
+      "contract_refs": ["SUP-001", "SIGN-001"],
+      "eng_attachment_refs": ["ENG-13", "ENG-15"],
+      "owner_roles": ["TECH", "SEC"],
+      "path_claims": [],
+      "deliverables": ["GitHub 私有仓库 YunMom", "origin/main 恢复副本"],
+      "acceptance": ["Secret/敏感正文/大文件扫描通过", "私有远端推送与只读恢复核验通过"],
+      "evidence_refs": [],
+      "external_gates": ["GitHub 登录与私有仓库创建权限"]
+    },
+    {
+      "id": "M1-WP01",
+      "stage": "M1",
+      "title": "V1 Scope 四列表与治理合同",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M0-WP03"],
+      "contract_refs": [
+        "BND-001", "BND-002", "BND-003", "BND-004", "USR-001", "SCP-001",
+        "MAT-001", "EXIT-001", "CHG-001", "SIGN-001"
+      ],
+      "eng_attachment_refs": ["ENG-00", "ENG-01", "ENG-15"],
+      "owner_roles": ["PO", "TECH", "QA"],
+      "path_claims": ["docs/engineering/scope/**", "docs/planning/**"],
+      "deliverables": ["Phase 1–6 四列表", "Feature/Skill/Rule/Provider/Field/平台映射"],
+      "acceptance": ["Required 无静默删减", "Future/Optional 明确排除"],
+      "evidence_refs": [],
+      "external_gates": []
+    },
+    {
+      "id": "M1-WP02",
+      "stage": "M1",
+      "title": "Episode、用户、家庭与数据分类合同",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M1-WP01"],
+      "contract_refs": [
+        "EPI-001", "EPI-002", "EPI-003", "EPI-004", "FAM-001", "FAM-002",
+        "FAM-003", "DATA-001", "IDN-001"
+      ],
+      "eng_attachment_refs": ["ENG-03", "ENG-04"],
+      "owner_roles": ["TECH", "LEGAL", "SEC"],
+      "path_claims": ["docs/engineering/architecture/**", "packages/yunmom_contracts/**"],
+      "deliverables": ["Episode/Subject 术语表", "五级 Data Registry", "身份与健康信任边界"],
+      "acceptance": ["1..N Subject 与生命周期语义唯一", "每字段有存储/日志/备份/出站规则"],
+      "evidence_refs": [],
+      "external_gates": ["LEGAL/SEC 架构审阅"]
+    },
+    {
+      "id": "M1-WP03",
+      "stage": "M1",
+      "title": "Consent、Provider 与出站信任边界",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M1-WP01"],
+      "contract_refs": [
+        "CONSENT-001", "EGRESS-001", "CTX-001", "FILE-001", "PROV-001",
+        "PROV-002", "BYOK-001", "TEL-001"
+      ],
+      "eng_attachment_refs": ["ENG-03", "ENG-07"],
+      "owner_roles": ["TECH", "LEGAL", "SEC"],
+      "path_claims": ["docs/engineering/architecture/**", "docs/engineering/provider/**"],
+      "deliverables": ["数据流与信任边界图", "Context/Egress/Provider 合同骨架"],
+      "acceptance": ["No Health Data Backend 可验证", "未知 Provider 路径默认关闭"],
+      "evidence_refs": [],
+      "external_gates": ["LEGAL/SEC Provider 准入"]
+    },
+    {
+      "id": "M1-WP04",
+      "stage": "M1",
+      "title": "Event/Command/Receipt Schema Registry v0",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M1-WP02"],
+      "contract_refs": [
+        "EVT-001", "EVT-002", "EVT-003", "EVT-004", "CMD-001", "RCT-001",
+        "FLD-001", "FLD-002", "CFL-001", "SCH-001"
+      ],
+      "eng_attachment_refs": ["ENG-04"],
+      "owner_roles": ["TECH", "QA", "SEC"],
+      "path_claims": ["packages/yunmom_contracts/**", "docs/engineering/schema/**"],
+      "deliverables": ["版本化 Schema Registry", "跨端 Conformance Fixture 接口"],
+      "acceptance": ["Event 不原地改写", "Command/Receipt/Conflict/Provenance 语义机器可检验"],
+      "evidence_refs": [],
+      "external_gates": []
+    },
+    {
+      "id": "M2-WP01",
+      "stage": "M2",
+      "title": "CreateEpisode 领域纵向切片",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M1-WP04"],
+      "contract_refs": [
+        "EPI-001", "EPI-002", "EPI-003", "EVT-001", "EVT-002", "EVT-003",
+        "EVT-004", "CMD-001", "RCT-001", "FLD-001", "FLD-002", "CFL-001",
+        "SCH-001", "IDEMP-001"
+      ],
+      "eng_attachment_refs": ["ENG-04", "ENG-15"],
+      "owner_roles": ["TECH", "QA"],
+      "path_claims": ["packages/yunmom_contracts/**", "packages/yunmom_domain/**"],
+      "deliverables": ["Aggregate/Reducer/Projection/Receipt", "内存 Event Store Adapter", "Purge dry-run"],
+      "acceptance": ["Replay 确定", "失败零写入", "重复意图最多一次业务效果"],
+      "evidence_refs": [],
+      "external_gates": []
+    },
+    {
+      "id": "M3-WP01",
+      "stage": "M3",
+      "title": "Crypto、Delete、Backup 与 Archive 内核",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M2-WP01"],
+      "contract_refs": [
+        "KEY-001", "KEY-002", "CRYPTO-001", "DEL-001", "DEL-002", "DEL-003",
+        "BAK-001", "ARC-001", "ARC-002", "ARC-003"
+      ],
+      "eng_attachment_refs": ["ENG-05", "ENG-06"],
+      "owner_roles": ["TECH", "SEC", "QA", "LEGAL"],
+      "path_claims": ["packages/yunmom_domain/**", "apps/yunmom_app/**", "docs/engineering/security/**"],
+      "deliverables": ["存储引擎 ADR", "加密/密钥/Purge 状态机", "Archive v1"],
+      "acceptance": ["崩溃恢复和原子回滚", "删除级联与密钥失效", "当前及前两 Archive 版本合同"],
+      "evidence_refs": [],
+      "external_gates": ["SEC Crypto Profile 审阅"]
+    },
+    {
+      "id": "M4-WP01",
+      "stage": "M4",
+      "title": "Android Local-first 与确定性 Safety 框架",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M3-WP01"],
+      "contract_refs": [
+        "MED-001", "MED-002", "MED-003", "MED-004", "MED-005", "MED-006",
+        "MED-007", "MED-008", "MED-009", "SAFEOPS-001"
+      ],
+      "eng_attachment_refs": ["ENG-06", "ENG-14"],
+      "owner_roles": ["TECH", "MD", "QA", "SEC"],
+      "path_claims": ["packages/yunmom_domain/**", "apps/yunmom_app/**", "docs/engineering/medical/**"],
+      "deliverables": ["签名 Rule Pack/LKG 框架", "离线保守转介", "本地核心流程"],
+      "acceptance": ["网络全断不影响本地功能", "无批准规则时不输出安全结论"],
+      "evidence_refs": [],
+      "external_gates": ["MD Rule/Golden 批准"]
+    },
+    {
+      "id": "M5-WP01",
+      "stage": "M5",
+      "title": "Consent、Queue、Gateway 与计量幂等",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M4-WP01", "M1-WP03"],
+      "contract_refs": [
+        "QUE-001", "QUE-002", "QUE-003", "QUE-004", "CONSENT-002", "GWY-001",
+        "RETRY-001", "RES-001", "MTR-001", "IDEMP-001"
+      ],
+      "eng_attachment_refs": ["ENG-07", "ENG-08"],
+      "owner_roles": ["TECH", "SEC", "QA", "LEGAL"],
+      "path_claims": ["packages/yunmom_domain/**", "apps/yunmom_app/**", "services/**"],
+      "deliverables": ["Fake/Official/BYOK Adapter", "本地 Pending Queue", "Operation/Attempt/Settlement"],
+      "acceptance": ["Safety/危机不排队", "文件不静默重试", "迟到结果不提交", "一次结算"],
+      "evidence_refs": [],
+      "external_gates": ["Provider/地域/合同白名单"]
+    },
+    {
+      "id": "M6-WP01",
+      "stage": "M6",
+      "title": "Phase 1–6 产品功能闭环",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M5-WP01"],
+      "contract_refs": ["BND-004", "FAM-001", "FAM-002", "FAM-003", "SCP-001"],
+      "eng_attachment_refs": ["ENG-01", "ENG-15"],
+      "owner_roles": ["TECH", "QA", "PO"],
+      "path_claims": ["apps/yunmom_app/**", "packages/yunmom_domain/**"],
+      "deliverables": ["Phase 1 交互壳", "Phase 3–5 功能", "Phase 6 闭环"],
+      "acceptance": ["Required 无静默缺项", "UI 写入只经 Typed Command"],
+      "evidence_refs": [],
+      "external_gates": ["对应医疗、法律、安全能力批准"]
+    },
+    {
+      "id": "M7-WP01",
+      "stage": "M7",
+      "title": "视觉 Token、无障碍与 Widget 集成",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M6-WP01"],
+      "contract_refs": [
+        "A11Y-001", "A11Y-002", "A11Y-003", "WGT-001", "WGT-002", "WGT-003",
+        "WGT-004", "TOK-001", "TOK-002", "TOK-003"
+      ],
+      "eng_attachment_refs": ["ENG-09", "ENG-10", "ENG-11"],
+      "owner_roles": ["TECH", "QA", "MD", "ETHICS"],
+      "path_claims": ["apps/yunmom_app/**", "packages/yunmom_design_system/**"],
+      "deliverables": ["语义 Token 消费", "P0 无障碍", "只读 WidgetProjection"],
+      "acceptance": ["TalkBack/200%/Reduce Motion", "Widget 默认关闭且非 Safety"],
+      "evidence_refs": [],
+      "external_gates": ["Visual G1/G3/G4+", "implementation_ready Token"]
+    },
+    {
+      "id": "M8-WP01",
+      "stage": "M8",
+      "title": "生产拓扑、供应链与事故响应",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M5-WP01"],
+      "contract_refs": [
+        "TOP-001", "SLO-001", "LOG-001", "OBS-001", "IAM-001", "SUP-001",
+        "REL-001", "INC-001", "OPS-001"
+      ],
+      "eng_attachment_refs": ["ENG-12", "ENG-13"],
+      "owner_roles": ["TECH", "SEC", "QA", "LEGAL", "MD", "ETHICS"],
+      "path_claims": ["services/**", "infra/**", "docs/engineering/operations/**"],
+      "deliverables": ["Staging/生产拓扑", "SBOM/签名", "Kill Switch/LKG", "双事故 Runbook"],
+      "acceptance": ["无正文可观测性", "回滚/恢复/熔断可演练", "7×24 P0 方案"],
+      "evidence_refs": [],
+      "external_gates": ["云资源、值班与专业域批准"]
+    },
+    {
+      "id": "M9-WP01",
+      "stage": "M9",
+      "title": "Android 内测矩阵与量化出口",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M7-WP01", "M8-WP01"],
+      "contract_refs": [
+        "MAT-001", "EXIT-001", "ACCD-001", "ACCM-001", "ACCS-001", "ACCU-001", "ACCP-001"
+      ],
+      "eng_attachment_refs": ["ENG-02", "ENG-09", "ENG-15"],
+      "owner_roles": ["TECH", "QA", "SEC", "MD"],
+      "path_claims": ["docs/evidence/**", "docs/engineering/qa/**"],
+      "deliverables": ["Android 具名设备矩阵", "删除/Archive/无障碍/性能证据"],
+      "acceptance": ["内测缺陷出口通过", "未批准能力保持关闭"],
+      "evidence_refs": [],
+      "external_gates": ["最低档和上档 Android 设备资源"]
+    },
+    {
+      "id": "M10-WP01",
+      "stage": "M10",
+      "title": "iOS 等价、渗透与公开候选",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M9-WP01"],
+      "contract_refs": ["BND-003", "MAT-001", "ACCD-001", "ACCS-001", "ACCU-001", "ACCP-001"],
+      "eng_attachment_refs": ["ENG-02", "ENG-05", "ENG-06", "ENG-09", "ENG-13", "ENG-15"],
+      "owner_roles": ["TECH", "QA", "SEC", "LEGAL"],
+      "path_claims": ["apps/yunmom_app/ios/**", "docs/evidence/**"],
+      "deliverables": ["iOS App/Widget/Keychain", "跨端 Replay/Archive", "独立渗透复测"],
+      "acceptance": ["双端语义等价", "Critical/High=0", "同一 Build 证据齐全"],
+      "evidence_refs": [],
+      "external_gates": ["macOS/Xcode/iOS 真机", "独立渗透供应商"]
+    },
+    {
+      "id": "M11-WP01",
+      "stage": "M11",
+      "title": "七方同构建 Go/No-Go",
+      "status": "planned",
+      "scope_class": "required",
+      "depends_on": ["M10-WP01"],
+      "contract_refs": ["SIGN-001", "EXIT-001", "CHG-001"],
+      "eng_attachment_refs": [
+        "ENG-00", "ENG-01", "ENG-02", "ENG-03", "ENG-04", "ENG-05", "ENG-06", "ENG-07",
+        "ENG-08", "ENG-09", "ENG-10", "ENG-11", "ENG-12", "ENG-13", "ENG-14", "ENG-15"
+      ],
+      "owner_roles": ["MD", "LEGAL", "SEC", "TECH", "QA", "ETHICS", "PO"],
+      "path_claims": ["docs/evidence/release/**"],
+      "deliverables": ["同一 Release Manifest 与七方签字包"],
+      "acceptance": ["七方全部 Go", "签字对象与 Build/Rule/Skill/Policy/Token/Schema 完全一致"],
+      "evidence_refs": [],
+      "external_gates": ["七方专业签字"]
+    }
+  ]
+}

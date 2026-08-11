@@ -2,7 +2,9 @@
 
 Android-first、iOS/Android 双端统一合同的 Local-first 孕期照料应用。
 
-当前状态：`SPRINT_0_FOUNDATION` / `RELEASE_NOT_APPROVED`。
+当前工程状态由[规划控制面](docs/planning/README.md)维护；公开发布状态保持
+`RELEASE_NOT_APPROVED`。当前执行前沿见自动生成的
+[PROJECT_MAP](docs/planning/PROJECT_MAP.md)。
 
 ## Workspace
 
@@ -19,7 +21,7 @@ Android-first、iOS/Android 双端统一合同的 Local-first 孕期照料应用
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\verify_storage_guard.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\run_ci.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\run_ci.ps1 -Offline
 ```
 
 不要直接运行工具链升级或 SDK 自动安装。项目脚本把 YunMom 的 Gradle、Pub、Android

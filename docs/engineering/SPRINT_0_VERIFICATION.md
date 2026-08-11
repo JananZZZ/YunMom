@@ -27,6 +27,31 @@ through the current local development proxy.
 - Visual release state remains correctly fail-closed at `G1_YUNMOM_MASTER` / `not_approved`.
 - Raw local RAG material is ignored; only its policy README is eligible for Git.
 
+## Storage-guard re-verification
+
+The storage guard implementation is bound to source commit
+`aedd217fd9f899bc9e0fdb0961c8704ab87ef2a1` (`M0-WP01`). It supersedes the earlier failed
+strict-CI observation without deleting that local audit record.
+
+Commands executed on `2026-08-11`:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\verify_storage_guard.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\run_ci.ps1 -Offline
+```
+
+Results:
+
+- storage-guard self-test: pass; observed and persistent `C:` growth `0 MiB`;
+- offline Strict CI: pass; format, analysis and all four test suites passed;
+- Strict CI observed and persistent `C:` growth: `3.46 MiB`, below the `100 MiB` hard limit;
+- project dependency, Gradle, Android user/AVD and audit paths resolved under `.local/`;
+- Windows compatibility temp resolved to `D:/DevCaches/YunMom/tmp`;
+- no SDK, IDE, emulator image or toolchain installation/upgrade was performed.
+
+The ignored `.local/audit/storage-guard.jsonl` is operational evidence only. Durable evidence is this
+source-bound readback plus the repository scripts and policy in the referenced commit.
+
 Run the repository gate from PowerShell without changing the machine-wide execution policy:
 
 ```powershell

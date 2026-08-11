@@ -20,11 +20,17 @@ try {
             if ($LASTEXITCODE -ne 0) { throw "flutter pub get failed: $LASTEXITCODE" }
         }
 
-        & $commands.Dart format --output=none --set-exit-if-changed apps packages
+        & $commands.Dart format --output=none --set-exit-if-changed apps packages tool
         if ($LASTEXITCODE -ne 0) { throw "dart format check failed: $LASTEXITCODE" }
 
         & $commands.Dart analyze --fatal-warnings --fatal-infos
         if ($LASTEXITCODE -ne 0) { throw "dart analyze failed: $LASTEXITCODE" }
+
+        & $commands.Dart run tool/plan_ops.dart check
+        if ($LASTEXITCODE -ne 0) { throw "engineering plan check failed: $LASTEXITCODE" }
+
+        & $commands.Dart run tool/plan_ops.dart self-test
+        if ($LASTEXITCODE -ne 0) { throw "engineering plan self-test failed: $LASTEXITCODE" }
 
         & $commands.Dart test packages/yunmom_contracts
         if ($LASTEXITCODE -ne 0) { throw "yunmom_contracts tests failed: $LASTEXITCODE" }
