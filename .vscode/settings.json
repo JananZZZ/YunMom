@@ -1,0 +1,10 @@
+{
+  "dart.lineLength": 100,
+  "editor.formatOnSave": true,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.dart_tool": true,
+    "**/build": true
+  }
+}

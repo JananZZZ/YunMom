@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "visual_version": "3.0.0",
+  "contract_version": "YunMom_Engineering_Contracts_V1.0.0",
+  "current_gate": "G1_YUNMOM_MASTER",
+  "user_role": "creative_approver",
+  "implementation_focus": "android_first_dual_platform_contract",
+  "golden": {
+    "yunmom_master": null,
+    "style_lock_sheet": null,
+    "home_canonical": null,
+    "app_icon": null,
+    "baby_anchors": {}
+  },
+  "system_extracted": false,
+  "last_user_decision_id": "D-0001",
+  "medical_visual_sources_ready": false,
+  "release_evidence_status": "not_approved",
+  "notes": [
+    "Derived projection; repair with visual_ops.py repair-projections."
+  ],
+  "_projection": {
+    "source": "visual/manifests/visual_program.json",
+    "canonical_revision": 2,
+    "canonical_sha256": "0f436035eb46e8513b42bdd09761413b4bc823b19aa9db07b6d78620bd7f6b1f",
+    "generated_at": "2026-08-10T20:41:47+00:00",
+    "do_not_edit": true
+  }
+}

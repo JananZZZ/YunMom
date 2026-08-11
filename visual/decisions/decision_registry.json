@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "revision": 2,
+  "decisions": [
+    {
+      "id": "D-0001",
+      "occurred_at": "2026-08-11T00:00:00+00:00",
+      "kind": "baseline",
+      "status": "approved",
+      "decided_by": "legacy-user",
+      "asset_ids": [],
+      "text": "The frozen YunMom product and engineering contracts are the starting authority; no visual master is approved yet.",
+      "preserve": [],
+      "change": []
+    }
+  ],
+  "_projection": {
+    "source": "visual/manifests/visual_program.json",
+    "canonical_revision": 2,
+    "canonical_sha256": "0f436035eb46e8513b42bdd09761413b4bc823b19aa9db07b6d78620bd7f6b1f",
+    "generated_at": "2026-08-10T20:41:47+00:00",
+    "do_not_edit": true
+  }
+}

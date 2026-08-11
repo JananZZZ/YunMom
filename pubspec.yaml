@@ -1,0 +1,13 @@
+name: yunmom_workspace
+description: YunMom Android-first, dual-platform Flutter workspace.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.12.2
+
+workspace:
+  - apps/yunmom_app
+  - packages/yunmom_contracts
+  - packages/yunmom_domain
+  - packages/yunmom_design_system

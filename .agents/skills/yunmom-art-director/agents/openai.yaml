@@ -1,0 +1,7 @@
+interface:
+  display_name: "YunMom Art Director"
+  short_description: "Production-grade YunMom visual direction and QA"
+  default_prompt: "Use $yunmom-art-director for this YunMom visual task. Preserve the user's requested review/create/edit/implement mode, apply the frozen contracts, and verify only claims supported by evidence."
+
+policy:
+  allow_implicit_invocation: true

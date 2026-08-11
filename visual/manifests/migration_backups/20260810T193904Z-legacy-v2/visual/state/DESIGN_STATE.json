@@ -1,0 +1,24 @@
+{
+  "schema_version": 3,
+  "visual_version": "3.0.0",
+  "contract_version": "YunMom_Engineering_Contracts_V1.0.0",
+  "current_gate": "G1_YUNMOM_MASTER",
+  "user_role": "creative_approver",
+  "implementation_focus": "android_first_dual_platform_contract",
+  "golden": {
+    "yunmom_master": null,
+    "style_lock_sheet": null,
+    "home_canonical": null,
+    "app_icon": null,
+    "baby_anchors": {}
+  },
+  "system_extracted": false,
+  "last_user_decision_id": "D-0001",
+  "medical_visual_sources_ready": false,
+  "release_evidence_status": "not_approved",
+  "notes": [
+    "The cloud-pillow image is inspiration for softness, material, and comfort, not an identity master.",
+    "Do not ask the user for production micro-parameters.",
+    "Android is the current implementation focus; iOS/Android retain one signed visual and accessibility contract."
+  ]
+}

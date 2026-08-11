@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "skill": "yunmom-art-director",
+  "cases": [
+    {"prompt": "给云妈妈设计并实现 CARE 页面", "should_trigger": true, "mode": "modify", "required_routes": ["ui", "accessibility_safety", "integrated_qa"]},
+    {"prompt": "把这个 YunMom 角色候选做得更高级", "should_trigger": true, "mode": "modify", "required_routes": ["art_direction", "character", "image_edit"]},
+    {"prompt": "生成 20 周 Baby 锚点", "should_trigger": true, "mode": "modify", "required_routes": ["character", "image_generation", "medical_visual_gate"]},
+    {"prompt": "评价这张 HOME 截图，只给审美与可用性意见", "should_trigger": true, "mode": "read_only", "required_routes": ["visual_review", "accessibility_safety"]},
+    {"prompt": "设计云妈妈 Widget", "should_trigger": true, "mode": "modify", "required_routes": ["widget", "privacy", "accessibility_safety"]},
+    {"prompt": "完善 Reduce Motion 下的 YunMom 动效", "should_trigger": true, "mode": "modify", "required_routes": ["motion", "accessibility_safety", "performance"]},
+    {"prompt": "设计 R3 立即行动页面", "should_trigger": true, "mode": "modify", "required_routes": ["safety", "accessibility_safety", "medical_copy_evidence"]},
+    {"prompt": "修复 SQLite 索引", "should_trigger": false, "mode": "out_of_scope", "required_routes": []},
+    {"prompt": "实现 Pending Queue 幂等", "should_trigger": false, "mode": "out_of_scope", "required_routes": []},
+    {"prompt": "判断这个症状是什么病", "should_trigger": false, "mode": "out_of_scope", "required_routes": []},
+    {"prompt": "只润色隐私政策文字，不改视觉呈现", "should_trigger": false, "mode": "out_of_scope", "required_routes": []}
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "00_README.md": {
+    "bytes": 3653,
+    "sha256": "51e485157229d041073625762288e0bb9ccc3401e81e8475077f9f04edb142eb"
+  },
+  "01_YunMom_完整产品设计规格.md": {
+    "bytes": 29983,
+    "sha256": "e805e92966212844e24c55cb60ef4ae2b779759ab168b60d40d2c227561dbc8f"
+  },
+  "02_YunMom_完整技术架构.md": {
+    "bytes": 24206,
+    "sha256": "973ba6d7c97da442576fbc07442f0c2813734a3dd5d2b270e0880d5490855b4c"
+  },
+  "03_YunMom_形象设计与视觉角色圣经.md": {
+    "bytes": 15772,
+    "sha256": "2dc61aad0b197dfe2e03c7694f0a677daf2ff85f0067126a11a99cedbb4f31da"
+  },
+  "04_YunMom_动效与交互规范.md": {
+    "bytes": 8078,
+    "sha256": "cccb7d7b7adc2e33fcc15613152ad6980584c6678685dddc1da8c8550da30c57"
+  },
+  "05_YunMom_AI_Skill_OS与人格规范.md": {
+    "bytes": 10063,
+    "sha256": "c9acb1952840ee775aa084c8d88ab2d92295be0a8fb21e03e5a8bc50e1e9a7f3"
+  },
+  "06_YunMom_数据隐私安全与异常场景.md": {
+    "bytes": 9130,
+    "sha256": "c4d63b07be2eb4fb665cf11cc032bc01f46cc5722efaeb62a33256e5960d4b9a"
+  },
+  "07_YunMom_页面状态矩阵与验收基线.md": {
+    "bytes": 9555,
+    "sha256": "627fe88198042876af64a7e4d033d1b1c3b4328a45e1fe96e87b102bae3bc3df"
+  },
+  "CHANGELOG.md": {
+    "bytes": 728,
+    "sha256": "48d9098b20423f7bf24a3fc4c9620f6babae464e55a84b4648d6085e37532294"
+  },
+  "references/yunmom_cloud_pillow_reference.png": {
+    "bytes": 1810740,
+    "sha256": "2cc11f6bf92e2f172d9237ce77aed9fe4eed641eaadae67ab270a325e9a0636c"
+  }
+}

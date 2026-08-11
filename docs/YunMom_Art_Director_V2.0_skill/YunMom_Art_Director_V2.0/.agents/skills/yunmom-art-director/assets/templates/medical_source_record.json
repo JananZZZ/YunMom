@@ -1,0 +1,20 @@
+{
+  "id": "MS-0001",
+  "asset_id": "VA-YYYYMMDD-xxxxxxxx",
+  "title": "source title",
+  "authority": "issuing clinical authority",
+  "jurisdiction": "CN",
+  "population": "adult pregnancy population and exclusions",
+  "gestational_stage": "declared gestational range",
+  "source_version": "version or revision identifier",
+  "publication_date": "2026-01-01",
+  "source_revision_date": "2026-01-01",
+  "accessed_date": "2026-01-01",
+  "source_url": "https://example.invalid/versioned-source",
+  "fixed_reference": "stable section/table/figure reference",
+  "source_checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+  "document_path": null,
+  "document_sha256": null,
+  "notes": [],
+  "created_at": "2026-01-01T00:00:00+00:00"
+}

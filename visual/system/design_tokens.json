@@ -1,0 +1,152 @@
+{
+  "$schema": "./design_tokens.schema.json",
+  "schema_version": 1,
+  "token_version": "0.3.0",
+  "content_sha256": "0bb46e8133ed06771f1751136bfb47bc0c758a72debb77cfdad130782226a5db",
+  "status": "bootstrap_provisional",
+  "implementation_ready": false,
+  "contract_decisions": ["A11Y-001", "A11Y-002", "A11Y-003", "TOK-001", "TOK-002", "TOK-003"],
+  "source_golden_ids": [],
+  "governance": {
+    "sole_implementation_source": true,
+    "medical_severity_source": "signed_local_rule_pack_not_tokens",
+    "breaking_change_requires": "CHG-001",
+    "required_approvals": ["DESIGN", "ANDROID", "IOS", "QA"],
+    "additional_approvals_for_safety_or_accessibility": ["MD"],
+    "generator_version": null,
+    "approved_content_sha256": null,
+    "approval_records": [],
+    "regression_evidence_records": [],
+    "note": "Structure and priority are active. Brand values remain provisional until valid G1/G3 Goldens, generators, regression evidence, and approvals exist."
+  },
+  "semantic_priority": [
+    "system_accessibility_high_contrast",
+    "medical_safety_crisis",
+    "error_permission_destructive_confirmation",
+    "temporary_interaction",
+    "silent_day_mood_ambient",
+    "task",
+    "time_weather_decoration"
+  ],
+  "primitive": {
+    "color": {
+      "white": "#FFFFFF",
+      "cloudWarm": "#FFFCFA",
+      "sky050": "#F4FAFF",
+      "sky100": "#E8F5FF",
+      "sky300": "#A9D8F5",
+      "blush050": "#FFF7FA",
+      "blush100": "#FDEBF2",
+      "blush300": "#F2BFD1",
+      "lavender100": "#F1ECFA",
+      "ink900": "#252331",
+      "ink700": "#4D495D",
+      "ink500": "#716C7E",
+      "line200": "#DDD9E3",
+      "coral500": "#C94F5C",
+      "coral700": "#8F2733",
+      "amber500": "#9B6500",
+      "green600": "#28724A",
+      "blue600": "#176B9E",
+      "focus": "#155EEF",
+      "black": "#000000"
+    },
+    "fontFamily": {
+      "sansCn": "system-ui",
+      "sansLatin": "system-ui"
+    },
+    "fontSize": {
+      "caption": 12,
+      "bodySmall": 14,
+      "body": 16,
+      "titleSmall": 18,
+      "title": 22,
+      "display": 30
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "lineHeight": {
+      "compact": 1.25,
+      "body": 1.5,
+      "relaxed": 1.65
+    },
+    "space": {"0": 0, "1": 4, "2": 8, "3": 12, "4": 16, "5": 20, "6": 24, "8": 32, "10": 40, "12": 48, "16": 64},
+    "radius": {"none": 0, "small": 8, "medium": 14, "large": 22, "pill": 999},
+    "elevation": {"flat": 0, "raised": 1, "overlay": 3, "critical": 4},
+    "opacity": {"disabled": 0.46, "secondary": 0.72, "scrim": 0.38, "opaque": 1.0},
+    "durationMs": {"instant": 0, "fast": 120, "standard": 200, "slow": 320},
+    "easing": {"standard": "cubic-bezier(0.2,0,0,1)", "decelerate": "cubic-bezier(0,0,0,1)"}
+  },
+  "semantic": {
+    "surface": {
+      "canvas": "{primitive.color.sky050}",
+      "cloud": "{primitive.color.cloudWarm}",
+      "card": "{primitive.color.white}",
+      "overlay": "{primitive.color.white}",
+      "scrim": "{primitive.color.black}@{primitive.opacity.scrim}"
+    },
+    "content": {
+      "primary": "{primitive.color.ink900}",
+      "secondary": "{primitive.color.ink700}",
+      "muted": "{primitive.color.ink500}",
+      "onCritical": "{primitive.color.white}"
+    },
+    "action": {
+      "primaryFill": "{primitive.color.blue600}",
+      "primaryContent": "{primitive.color.white}",
+      "secondaryFill": "{primitive.color.white}",
+      "secondaryContent": "{primitive.color.ink900}"
+    },
+    "focus": {
+      "ring": "{primitive.color.focus}",
+      "ringWidth": 3,
+      "ringOffset": 2
+    },
+    "disabled": {
+      "opacity": "{primitive.opacity.disabled}",
+      "content": "{primitive.color.ink500}"
+    },
+    "icon": {
+      "small": 16,
+      "standard": 20,
+      "large": 24,
+      "strokeWidth": 1.75,
+      "source": "approved_project_icon_library"
+    },
+    "highContrast": {
+      "systemOverrideRequired": true,
+      "preserveSemanticPriority": true,
+      "minimumTextContrast": 4.5,
+      "minimumLargeTextContrast": 3.0,
+      "minimumNonTextContrast": 3.0
+    },
+    "safety": {
+      "r0": {"accent": "{primitive.color.blue600}", "icon": "safety-information", "requiresExplicitTextAndAction": true},
+      "r1": {"accent": "{primitive.color.green600}", "icon": "safety-consult", "requiresExplicitTextAndAction": true},
+      "r2": {"accent": "{primitive.color.amber500}", "icon": "safety-contact-care", "requiresExplicitTextAndAction": true},
+      "r3": {"accent": "{primitive.color.coral700}", "icon": "safety-act-now", "requiresExplicitTextAndAction": true},
+      "crisis": {"accent": "{primitive.color.coral700}", "icon": "crisis-human-help", "requiresExplicitTextAndAction": true},
+      "characterMayEncodeSeverity": false,
+      "colorMayEncodeSeverityAlone": false
+    },
+    "destructive": {"fill": "{primitive.color.coral700}", "content": "{primitive.color.white}", "requiresExplicitLabel": true},
+    "ambient": {"day": "{primitive.color.sky100}", "soft": "{primitive.color.blush050}", "silentDay": "{primitive.color.cloudWarm}"},
+    "touchTarget": {"androidMinDp": 48, "iosMinPt": 44},
+    "motion": {
+      "stateChange": {"duration": "{primitive.durationMs.standard}", "easing": "{primitive.easing.standard}"},
+      "reduceMotionDuration": "{primitive.durationMs.instant}",
+      "meaningMayDependOnMotion": false
+    },
+    "layer": {"ambient": 0, "content": 10, "interaction": 20, "permissionError": 30, "safety": 40, "systemAccessibility": 50}
+  },
+  "platform_mappings": {
+    "flutter": {"status": "required_present_disabled", "target": "lib/design/generated/yunmom_tokens.dart", "generator": null, "source_content_sha256": null, "output_sha256": null, "verification_evidence_ids": []},
+    "rive": {"status": "required_present_disabled", "target": "visual/system/generated/rive_tokens.json", "generator": null, "source_content_sha256": null, "output_sha256": null, "verification_evidence_ids": []},
+    "ios_widget": {"status": "required_present_disabled", "target": "ios/Widget/Generated/YunMomTokens.swift", "generator": null, "source_content_sha256": null, "output_sha256": null, "verification_evidence_ids": []},
+    "android_widget": {"status": "required_present_disabled", "target": "android/app/src/main/java/generated/YunMomTokens.kt", "generator": null, "source_content_sha256": null, "output_sha256": null, "verification_evidence_ids": []}
+  }
+}

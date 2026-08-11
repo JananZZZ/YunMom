@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "program_id": "yunmom-visual-program",
+  "revision": 2,
+  "created_at": "2026-08-10T19:39:04+00:00",
+  "updated_at": "2026-08-10T20:41:47+00:00",
+  "visual_version": "3.0.0",
+  "contract_version": "YunMom_Engineering_Contracts_V1.0.0",
+  "current_gate": "G1_YUNMOM_MASTER",
+  "release_status": "not_approved",
+  "golden_slots": {
+    "yunmom_master": null,
+    "style_lock_sheet": null,
+    "home_canonical": null,
+    "app_icon": null,
+    "baby_anchors": {}
+  },
+  "assets": [],
+  "decisions": [
+    {
+      "id": "D-0001",
+      "occurred_at": "2026-08-11T00:00:00+00:00",
+      "kind": "baseline",
+      "status": "approved",
+      "decided_by": "legacy-user",
+      "asset_ids": [],
+      "text": "The frozen YunMom product and engineering contracts are the starting authority; no visual master is approved yet.",
+      "preserve": [],
+      "change": []
+    }
+  ],
+  "reviews": [],
+  "medical_sources": [],
+  "medical_verifications": [],
+  "evidence_records": [],
+  "operations": [
+    {
+      "id": "OP-source-migrate-v3-20260811",
+      "command": "migrate",
+      "fingerprint": "55baf7684f980aeafc0036677efbb00f5bd4e386171041737f1a7eab7b1eec5d",
+      "committed_revision": 1,
+      "created_at": "2026-08-10T19:39:04+00:00",
+      "result": {
+        "status": "migrated",
+        "backup_path": "visual/manifests/migration_backups/20260810T193904Z-legacy-v2",
+        "warnings": [],
+        "operation_id": "OP-source-migrate-v3-20260811",
+        "idempotent_replay": false
+      }
+    },
+    {
+      "id": "OP-source-repair-backup-manifest-20260811",
+      "command": "repair-migration-hashes",
+      "fingerprint": "92f021bcd8a7082e61fee635067a14bc3d8d6642d2893fd4742a32ba5fa94ee9",
+      "committed_revision": 2,
+      "created_at": "2026-08-10T20:41:47+00:00",
+      "result": {
+        "status": "repaired",
+        "repaired_backup_paths": [
+          "visual/manifests/migration_backups/20260810T193904Z-legacy-v2"
+        ],
+        "operation_id": "OP-source-repair-backup-manifest-20260811",
+        "idempotent_replay": false
+      }
+    }
+  ],
+  "migration_history": [
+    {
+      "from": "legacy-v2-projections",
+      "to_schema": 1,
+      "migrated_at": "2026-08-10T19:39:04+00:00",
+      "backup_path": "visual/manifests/migration_backups/20260810T193904Z-legacy-v2",
+      "backup_manifest_sha256": "53b70f45f386ef0c452cca02b15b0e34514c2cf7d174a28cdf792bc852d2e6e0",
+      "warnings": []
+    }
+  ]
+}

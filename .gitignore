@@ -1,0 +1,70 @@
+# Operating system and editor state
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*.tmp
+*.bak
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Secrets and local-only configuration
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+key.properties
+**/local.properties
+**/google-services.json
+**/GoogleService-Info.plist
+
+# Dart and Flutter generated state
+**/.dart_tool/
+**/.packages
+**/.pub/
+**/.pub-cache/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/build/
+coverage/
+
+# Android generated state
+**/android/.gradle/
+**/android/captures/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+
+# iOS and macOS generated state
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/macos/Pods/
+**/macos/Flutter/ephemeral/
+**/DerivedData/
+
+# Test, profiling, and diagnostic outputs
+*.log
+*.trace
+*.profraw
+*.lcov
+test-results/
+artifacts/
+
+# Local Codex/runtime scratch state (project skills and agents remain tracked)
+.codex/tmp/
+.codex/cache/
+
+# Local research corpus: potentially licensed/medical material is never committed
+# or treated as an approved Rule Pack source. Keep only governance metadata.
+RAG/**/*
+!RAG/README.md
+!RAG/source_manifest.example.json

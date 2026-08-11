@@ -1,0 +1,53 @@
+{
+  "id": "VA-YYYYMMDD-xxxxxxxx",
+  "name": "human-readable asset name",
+  "class": "S",
+  "type": "character",
+  "lifecycle_stage": "candidate",
+  "freshness": "current",
+  "evidence_stage": "concept",
+  "evidence_binding": null,
+  "version": 1,
+  "path": "visual/candidates/example.png",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "golden": null,
+  "parents": [],
+  "references": [],
+  "depends_on": [],
+  "created_by": "creator identity",
+  "tool": null,
+  "model": null,
+  "prompt_path": "visual/prompts/example.md",
+  "medical_applicable": false,
+  "privacy": {
+    "classification": "public_product",
+    "content_origin": "synthetic",
+    "persistent_evidence_allowed": true,
+    "external_egress": {
+      "status": "prohibited",
+      "receipt_ref": null
+    },
+    "cleanup_scope": [
+      "derived_assets",
+      "evidence_artifacts",
+      "external_provider_request",
+      "golden_copy",
+      "prompts",
+      "review_artifacts",
+      "source_asset",
+      "temporary_files"
+    ]
+  },
+  "rights": {
+    "status": "unverified",
+    "commercial_use_allowed": false,
+    "derivative_use_allowed": false,
+    "attribution_required": false,
+    "attribution_text": null,
+    "evidence_refs": []
+  },
+  "stale_reasons": [],
+  "created_at": "2026-01-01T00:00:00+00:00",
+  "updated_at": "2026-01-01T00:00:00+00:00",
+  "notes": []
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "path": "visual/references/user/yunmom_cloud_pillow_inspiration.png",
+  "sha256": "2cc11f6bf92e2f172d9237ce77aed9fe4eed641eaadae67ab270a325e9a0636c",
+  "source_kind": "user_provided",
+  "reference_role": "inspiration_only",
+  "allowed_qualities": ["softness", "short_pile_plush_material", "comfort", "supported_baby_composition"],
+  "prohibited_roles": ["yunmom_identity_master", "pixel_or_silhouette_clone", "medical_visual_evidence", "automatic_rights_clearance"],
+  "contains_user_health_data": false,
+  "privacy": {
+    "classification": "identity_commercial",
+    "content_origin": "not_applicable",
+    "persistent_evidence_allowed": true,
+    "external_egress": {
+      "status": "not_requested",
+      "receipt_ref": null
+    }
+  },
+  "rights": {
+    "status": "unverified",
+    "allowed_use": "inspiration_only",
+    "commercial_use_allowed": false,
+    "derivative_use_allowed": false,
+    "attribution_required": false,
+    "evidence_refs": []
+  },
+  "registered_at": "2026-08-11",
+  "note": "Create an original YunMom silhouette, face, nest, interaction, and composition language. Public-release asset rights remain a separate evidence item."
+}

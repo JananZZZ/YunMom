@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://yunmom.local/schema/design-tokens-v1.json",
+  "title": "YunMom semantic Design Token bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "token_version", "content_sha256", "status", "implementation_ready", "contract_decisions", "source_golden_ids", "governance", "semantic_priority", "primitive", "semantic", "platform_mappings"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": 1},
+    "token_version": {"$ref": "#/$defs/semver"},
+    "content_sha256": {"$ref": "#/$defs/sha256"},
+    "status": {"enum": ["bootstrap_provisional", "proposed", "approved", "deprecated"]},
+    "implementation_ready": {"type": "boolean"},
+    "contract_decisions": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "source_golden_ids": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sole_implementation_source", "medical_severity_source", "breaking_change_requires", "required_approvals", "additional_approvals_for_safety_or_accessibility", "generator_version", "approved_content_sha256", "approval_records", "regression_evidence_records", "note"],
+      "properties": {
+        "sole_implementation_source": {"const": true},
+        "medical_severity_source": {"const": "signed_local_rule_pack_not_tokens"},
+        "breaking_change_requires": {"const": "CHG-001"},
+        "required_approvals": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "additional_approvals_for_safety_or_accessibility": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "generator_version": {"anyOf": [{"$ref": "#/$defs/semver"}, {"type": "null"}]},
+        "approved_content_sha256": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "approval_records": {"type": "array", "items": {"$ref": "#/$defs/approvalRecord"}},
+        "regression_evidence_records": {"type": "array", "items": {"$ref": "#/$defs/regressionEvidenceRecord"}},
+        "note": {"type": "string", "minLength": 1}
+      }
+    },
+    "semantic_priority": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "system_accessibility_high_contrast"},
+        {"const": "medical_safety_crisis"},
+        {"const": "error_permission_destructive_confirmation"},
+        {"const": "temporary_interaction"},
+        {"const": "silent_day_mood_ambient"},
+        {"const": "task"},
+        {"const": "time_weather_decoration"}
+      ],
+      "items": false,
+      "minItems": 7,
+      "maxItems": 7
+    },
+    "primitive": {"type": "object", "minProperties": 8},
+    "semantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["surface", "content", "action", "focus", "disabled", "icon", "highContrast", "safety", "destructive", "ambient", "touchTarget", "motion", "layer"],
+      "properties": {
+        "surface": {"$ref": "#/$defs/nonEmptyObject"},
+        "content": {"$ref": "#/$defs/nonEmptyObject"},
+        "action": {"$ref": "#/$defs/nonEmptyObject"},
+        "focus": {"$ref": "#/$defs/nonEmptyObject"},
+        "disabled": {"$ref": "#/$defs/nonEmptyObject"},
+        "icon": {"$ref": "#/$defs/nonEmptyObject"},
+        "highContrast": {"$ref": "#/$defs/nonEmptyObject"},
+        "safety": {"$ref": "#/$defs/nonEmptyObject"},
+        "destructive": {"$ref": "#/$defs/nonEmptyObject"},
+        "ambient": {"$ref": "#/$defs/nonEmptyObject"},
+        "touchTarget": {"$ref": "#/$defs/nonEmptyObject"},
+        "motion": {"$ref": "#/$defs/nonEmptyObject"},
+        "layer": {"$ref": "#/$defs/nonEmptyObject"}
+      }
+    },
+    "platform_mappings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["flutter", "rive", "ios_widget", "android_widget"],
+      "properties": {
+        "flutter": {"$ref": "#/$defs/platformMapping"},
+        "rive": {"$ref": "#/$defs/platformMapping"},
+        "ios_widget": {"$ref": "#/$defs/platformMapping"},
+        "android_widget": {"$ref": "#/$defs/platformMapping"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"implementation_ready": {"const": true}}, "required": ["implementation_ready"]},
+      "then": {
+        "properties": {
+          "status": {"const": "approved"},
+          "source_golden_ids": {"minItems": 1},
+          "governance": {
+            "properties": {
+              "generator_version": {"$ref": "#/$defs/semver"},
+              "approved_content_sha256": {"$ref": "#/$defs/sha256"},
+              "approval_records": {
+                "minItems": 5,
+                "allOf": [
+                  {"contains": {"properties": {"role": {"const": "DESIGN"}}, "required": ["role"]}},
+                  {"contains": {"properties": {"role": {"const": "ANDROID"}}, "required": ["role"]}},
+                  {"contains": {"properties": {"role": {"const": "IOS"}}, "required": ["role"]}},
+                  {"contains": {"properties": {"role": {"const": "QA"}}, "required": ["role"]}},
+                  {"contains": {"properties": {"role": {"const": "MD"}}, "required": ["role"]}}
+                ]
+              },
+              "regression_evidence_records": {
+                "minItems": 5,
+                "allOf": [
+                  {"contains": {"properties": {"category": {"const": "golden"}}, "required": ["category"]}},
+                  {"contains": {"properties": {"category": {"const": "contrast"}}, "required": ["category"]}},
+                  {"contains": {"properties": {"category": {"const": "screen_reader"}}, "required": ["category"]}},
+                  {"contains": {"properties": {"category": {"const": "reduce_motion"}}, "required": ["category"]}},
+                  {"contains": {"properties": {"category": {"const": "platform_generation"}}, "required": ["category"]}}
+                ]
+              }
+            }
+          },
+          "platform_mappings": {
+            "properties": {
+              "flutter": {"$ref": "#/$defs/verifiedPlatformMapping"},
+              "rive": {"$ref": "#/$defs/verifiedPlatformMapping"},
+              "ios_widget": {"$ref": "#/$defs/verifiedPlatformMapping"},
+              "android_widget": {"$ref": "#/$defs/verifiedPlatformMapping"}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"status": {"const": "approved"}}, "required": ["status"]},
+      "then": {"properties": {"implementation_ready": {"const": true}}}
+    }
+  ],
+  "$defs": {
+    "semver": {"type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nonEmptyObject": {"type": "object", "minProperties": 1},
+    "approvalRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "approval_id", "scope", "signed_at", "content_sha256", "evidence_path", "evidence_sha256"],
+      "properties": {
+        "role": {"enum": ["DESIGN", "ANDROID", "IOS", "QA", "MD", "LEGAL", "SEC", "ETHICS", "PO", "TECH"]},
+        "approval_id": {"type": "string", "minLength": 1},
+        "scope": {"type": "string", "minLength": 1},
+        "signed_at": {"type": "string", "format": "date-time"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "evidence_path": {"type": "string", "minLength": 1},
+        "evidence_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "regressionEvidenceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category", "evidence_id", "artifact_path", "sha256", "content_sha256", "platform", "build_hash"],
+      "properties": {
+        "category": {"enum": ["golden", "contrast", "screen_reader", "reduce_motion", "platform_generation"]},
+        "evidence_id": {"type": "string", "minLength": 1},
+        "artifact_path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "platform": {"enum": ["cross_platform", "flutter", "rive", "ios_widget", "android_widget"]},
+        "build_hash": {"type": "string", "minLength": 7}
+      }
+    },
+    "platformMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "target", "generator", "source_content_sha256", "output_sha256", "verification_evidence_ids"],
+      "properties": {
+        "status": {"enum": ["required_present_disabled", "proposed", "generated", "verified"]},
+        "target": {"type": "string", "minLength": 1},
+        "generator": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]},
+        "source_content_sha256": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "output_sha256": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "verification_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "verifiedPlatformMapping": {
+      "allOf": [
+        {"$ref": "#/$defs/platformMapping"},
+        {
+          "properties": {
+            "status": {"const": "verified"},
+            "generator": {"type": "string", "minLength": 1},
+            "source_content_sha256": {"$ref": "#/$defs/sha256"},
+            "output_sha256": {"$ref": "#/$defs/sha256"},
+            "verification_evidence_ids": {"minItems": 1}
+          }
+        }
+      ]
+    }
+  }
+}

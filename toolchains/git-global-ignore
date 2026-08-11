@@ -1,0 +1,7 @@
+# Cross-project editor and operating-system debris only.
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~

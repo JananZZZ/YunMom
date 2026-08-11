@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "path": "visual/prompts/example.md",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "reference_role": "production_input",
+  "prohibited_roles": [],
+  "privacy": {
+    "classification": "public_product",
+    "content_origin": "synthetic",
+    "persistent_evidence_allowed": true,
+    "external_egress": {
+      "status": "prohibited",
+      "receipt_ref": null
+    }
+  },
+  "rights": {
+    "status": "owned",
+    "commercial_use_allowed": true,
+    "derivative_use_allowed": true,
+    "attribution_required": false,
+    "attribution_text": null,
+    "evidence_refs": [
+      "RIGHTS-OWNED:replace-with-immutable-authorization-reference"
+    ]
+  }
+}

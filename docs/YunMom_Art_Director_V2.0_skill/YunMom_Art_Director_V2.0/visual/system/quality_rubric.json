@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "hard_gates_are_non_compensable": true,
+  "hard_gates": [
+    "canonical_contract_loaded",
+    "frozen_contracts_and_professional_authority",
+    "yunmom_identity_and_low_pressure",
+    "originality_and_reference_roles",
+    "dynamic_ui_not_baked",
+    "baby_structured_medical_verification_when_applicable",
+    "multi_subject_scope_and_no_individual_health_inference",
+    "r0_r3_and_crisis_not_symbol_color_motion_character_or_widget_only",
+    "dismiss_not_resolve",
+    "p0_accessibility_and_system_reduce_motion",
+    "widget_opt_in_privacy_expiry_and_full_cleanup",
+    "gentle_closure_confirmed_and_no_residual_growth_content",
+    "semantic_token_ssot_and_priority",
+    "synthetic_or_deidentified_visual_evidence",
+    "approved_provider_path_plus_per_send_confirmation_for_sensitive_egress",
+    "commercial_and_derivative_rights_evidence",
+    "provenance_lineage_freshness_and_build_scope",
+    "production_feasibility"
+  ],
+  "aesthetic_score_only_after_all_hard_gates_pass": true,
+  "aesthetic_weights": {
+    "brand_identity": 22,
+    "warmth_calm_low_pressure": 18,
+    "premium_craft": 18,
+    "composition_hierarchy": 16,
+    "material_light": 12,
+    "valid_golden_consistency": 8,
+    "production_elegance": 6
+  },
+  "screening_thresholds": {"S": 93, "A": 90, "B": 86},
+  "evidence_stages": ["concept", "aesthetic_golden", "integrated", "matrix_accepted", "release_signed"],
+  "release_rule": "Aesthetic score and user approval never satisfy medical, accessibility, privacy, security, platform, QA, or same-build release gates."
+}

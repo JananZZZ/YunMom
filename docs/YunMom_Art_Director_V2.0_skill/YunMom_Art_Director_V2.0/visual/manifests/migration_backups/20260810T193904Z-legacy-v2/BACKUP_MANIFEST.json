@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-08-10T19:39:04+00:00",
+  "files": {
+    "visual/state/DESIGN_STATE.json": "2774458efcea5da3c13b50621e5e2ddf9b8cbc574b38bbffab6c7c77d5a113cc",
+    "visual/manifests/asset_registry.json": "1ba6fd22bf4bfb04d7e28918d6603992a2b3b5f4bc8379496368c2734569c91d",
+    "visual/decisions/decision_registry.json": "0284b50ba01ceae7a7c871af0b2aba487a92142d923b6d6ffecb271d6a06bec8",
+    "visual/reviews/review_registry.json": "5fcebc00dcf1545e35f020d43345f9fd9fe83d74bd7d04462be23811a8fc2f14",
+    "visual/decisions/DECISION_LOG.md": "c9831ee4bccb299918ff4cf10689f93fb8930a16441e3b5ed064e3832d42e36b"
+  }
+}

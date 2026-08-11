@@ -1,0 +1,38 @@
+{
+  "id": "EV-0001",
+  "created_at": "2026-01-01T00:00:00+00:00",
+  "asset_id": "VA-YYYYMMDD-xxxxxxxx",
+  "asset_version": 1,
+  "asset_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "category": "integration",
+  "sequence": 1,
+  "source_tag": "yunmom-v1.0.0-rc1",
+  "build_hash": "0123456789abcdef",
+  "platform": "android",
+  "os": "Android 15",
+  "device": "named physical test device",
+  "test_suite": "P0 HOME integration suite",
+  "verifier": "independent verifier",
+  "verifier_role": "QA",
+  "credential_or_attestation": "visual/reviews/attestations/EV-0001-qa-attestation.json",
+  "independent": true,
+  "verdict": "PASS",
+  "privacy": {
+    "classification": "public_product",
+    "content_origin": "synthetic",
+    "persistent_evidence_allowed": true,
+    "external_egress": {
+      "status": "prohibited",
+      "receipt_ref": null
+    }
+  },
+  "artifact_paths": [
+    "visual/reviews/screens/example_state_android_1080x2400_v01.png",
+    "visual/reviews/attestations/EV-0001-qa-attestation.json"
+  ],
+  "artifact_sha256": {
+    "visual/reviews/screens/example_state_android_1080x2400_v01.png": "0000000000000000000000000000000000000000000000000000000000000000",
+    "visual/reviews/attestations/EV-0001-qa-attestation.json": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "notes": []
+}

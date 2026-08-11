@@ -1,0 +1,19 @@
+{
+  "id": "MV-0001",
+  "created_at": "2026-01-01T00:00:00+00:00",
+  "asset_id": "VA-YYYYMMDD-xxxxxxxx",
+  "asset_version": 1,
+  "asset_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "sequence": 1,
+  "verifier": "qualified human reviewer",
+  "verifier_kind": "external_specialist",
+  "professional_role": "obstetrician",
+  "credential_ref": "credential/evidence reference",
+  "independent": true,
+  "source_ids": ["MS-0001"],
+  "scope": "gestational range, population and visual structures compared",
+  "verdict": "VERIFIED",
+  "attestation_path": "visual/reviews/medical/MV-0001-signed-attestation.pdf",
+  "attestation_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "notes": []
+}

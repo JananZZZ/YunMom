@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "path": "visual/prompts/SPRINT_0_DESIGN_SYSTEM_BRIDGE.md",
+  "sha256": "55f0b8108515970c24ebf5b7efff82cbc9a72d82cf8d1050e99cb7dfaadd86f3",
+  "reference_role": "production_input",
+  "prohibited_roles": [
+    "identity_golden",
+    "screen_golden",
+    "medical_evidence",
+    "release_evidence"
+  ],
+  "privacy": {
+    "classification": "public_product",
+    "content_origin": "synthetic",
+    "persistent_evidence_allowed": true,
+    "external_egress": {
+      "status": "prohibited",
+      "receipt_ref": null
+    }
+  },
+  "rights": {
+    "status": "owned",
+    "commercial_use_allowed": true,
+    "derivative_use_allowed": true,
+    "attribution_required": false,
+    "attribution_text": null,
+    "evidence_refs": [
+      "RIGHTS-OWNED:user-authorized-project-implementation-2026-08-11"
+    ]
+  }
+}

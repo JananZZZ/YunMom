@@ -1,0 +1,439 @@
+{
+  "schema_version": 2,
+  "package_version": "3.0.0",
+  "generated_at": "2026-08-11T01:32:18+00:00",
+  "algorithm": "sha256",
+  "inventory": {
+    "immutable_roots": [
+      ".agents",
+      ".codex",
+      "product_baseline_reference"
+    ],
+    "immutable_files": [
+      "00_README.md",
+      "AGENTS.md",
+      "CODEX_START_HERE.md",
+      "DESIGN_OPERATING_MODEL.md",
+      "MIGRATION_FROM_V1.md",
+      "V2_DEEP_AUDIT_REPORT.md"
+    ],
+    "seed_roots": [
+      "visual"
+    ],
+    "seed_files": [],
+    "runtime_roots": [],
+    "runtime_files": []
+  },
+  "files": {
+    ".agents/skills/yunmom-art-director/SKILL.md": {
+      "bytes": 14223,
+      "sha256": "1a83f673937999a1b7ae5d34fb2a7c7ad46ff2c1d18c7b43b1e8bb2a7ccae888",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/agents/openai.yaml": {
+      "bytes": 379,
+      "sha256": "9db85924cdf7b89816a4911073427e2f7bdda4c6a279c7734de12cd9f84d175c",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/assets/templates/asset_record.json": {
+      "bytes": 1380,
+      "sha256": "157f1657d121aa04d6c171fe770001f94b2e4d9835510e24d0d90b4c0b2a06b9",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/assets/templates/evidence_record.json": {
+      "bytes": 1356,
+      "sha256": "5401abb5895b9e5962450ab72cf4b4f519f5d14ec4d0628e28bcbce70dece2cd",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/assets/templates/medical_source_record.json": {
+      "bytes": 756,
+      "sha256": "e1ce002876b67fd8ae4d4bd6b1e382c43eabefb5f62b9022fc54cad54e1bd955",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/assets/templates/medical_verification_record.json": {
+      "bytes": 744,
+      "sha256": "7d18428cf626c8f512f69c05d26c02e1d08528b39825f15975f19b1a2709490f",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/assets/templates/prompt_template.md": {
+      "bytes": 2931,
+      "sha256": "783c1be07b6c3a3098bb97c202dea5507026ff131229baa5553b1344f38c1e25",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/assets/templates/provenance_sidecar.json": {
+      "bytes": 710,
+      "sha256": "f701425e16328cd9cbd9cc2ecfebdad8a965f40c52f06da105d639d80a6b40d4",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/assets/templates/review_record.json": {
+      "bytes": 686,
+      "sha256": "76b53ac266ecacf97a1f41a4575319d425224487663c107fcfef9ed3febe19cb",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/evals/trigger_cases.json": {
+      "bytes": 1751,
+      "sha256": "3ed5cc5b731aac6969011e59a280ee78c24d9a86ac1ada4ab9e8c6c1d3fbdd32",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/ACCESSIBILITY_SAFETY.md": {
+      "bytes": 5651,
+      "sha256": "ea7ee09b56e83afed510d9b81e8e9135a1143ebc93cc583072cbf4a04eaf9efe",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/ART_DIRECTION.md": {
+      "bytes": 1655,
+      "sha256": "adffee5c8480dae7b2442fe4be4db5d8eb883749811efd348dc29b9e8d68b6e4",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/CHARACTER_SYSTEM.md": {
+      "bytes": 2187,
+      "sha256": "f0353ad7771cbc7bea20e9a9b384b74481c71129954963872cd487ae02f837d8",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/CONTRACT_PRECEDENCE.md": {
+      "bytes": 6103,
+      "sha256": "f83e524f8669c43a7738b1cd414ec5ccae538a93d273f75c247185d19c9835d4",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/DESIGN_SYSTEM_EXTRACTION.md": {
+      "bytes": 2748,
+      "sha256": "03c4f18beb3f4f848f59766eb870eaad6a7131f23980b8c7afb941c6d2373f52",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/EVIDENCE_AND_QA.md": {
+      "bytes": 5141,
+      "sha256": "7784870da8aba12b2f777658bfd823881e57bc675d232e1a85191c19826083c8",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/FIRST_ROUND_BRIEF.md": {
+      "bytes": 1478,
+      "sha256": "ce912ed8133355a41e5fedc5be58ed1d1e6e42334cbc55ff4c57f4733996ea1e",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/IMAGEGEN_PLAYBOOK.md": {
+      "bytes": 2671,
+      "sha256": "a8b8bdf5c8489424af94e22ee7c3950bea3a8fe2b857f0218d9d0682447cd26a",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/ITERATION_POLICY.md": {
+      "bytes": 1039,
+      "sha256": "9c68088d70451bbc5bc7fbd322896057a6a1f76bdf3d18df093d5cab4bc718ec",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/MOTION_SYSTEM.md": {
+      "bytes": 3049,
+      "sha256": "7ffdf5180d112003c4e13d34d99d5638e0839f7617b0f25de14a4467c1132226",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/ORIGINALITY_AND_MEDICAL_GATES.md": {
+      "bytes": 2639,
+      "sha256": "7d593c299395d6e825a8ab5a09ab2f63647bc3a1896b23c0ac54de3a73fdbb7a",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/PRODUCTION_ASSET_RULES.md": {
+      "bytes": 3206,
+      "sha256": "d3778df6c00f6843473ccf9e8023129f7c915ee3e71b5c17418d47d73897d79d",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/REVIEWER_BRIEFS.md": {
+      "bytes": 2304,
+      "sha256": "114d9de448a008d9fa853cb2398d5fc3acfabb18cc8b6c7d68073068d4b4d403",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/REVIEW_PROTOCOL.md": {
+      "bytes": 3104,
+      "sha256": "722599ce03122fc76e11663f773234316da2dbe92273bacb9bc8bd79175c2b7a",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/ROUND_WORKFLOW.md": {
+      "bytes": 1947,
+      "sha256": "3f0366f54437db87d0a1da495854b4a5922b6712191763cf163f8098f75bd912",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/SCREEN_QA_MATRIX.md": {
+      "bytes": 4016,
+      "sha256": "f040e3d13063dfce48e4a30e67e897347f2f14ee63f54b2926e25a0215a76a58",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/STATE_TOOL_REFERENCE.md": {
+      "bytes": 6346,
+      "sha256": "ffb071ea0fea0ac22c1b7e4b7485039f0311af55a42e255e6cc4947d91abedad",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/STATIC_DYNAMIC_ASSET_MATRIX.md": {
+      "bytes": 2330,
+      "sha256": "6106a88c7fbca8c5a8cd0e92b4feebc288ab9eac028131f88544a0322e8a3a49",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/TASK_ROUTING.md": {
+      "bytes": 3031,
+      "sha256": "a446974633387b82762fe8516022ca6cc1729f7ac20deeeb3102ffba371349c1",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/references/UI_SYSTEM.md": {
+      "bytes": 3744,
+      "sha256": "20e8cde0ec8a94c72b158f7d701eb67d942ee894025237d5c83dd69c9fa8f975",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/scripts/build_contact_sheet.py": {
+      "bytes": 25499,
+      "sha256": "5cbeee222c329789c99d17f5f49dd94a9379a865d843d152740fb911dc4ac644",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/scripts/requirements-contact-sheet.txt": {
+      "bytes": 180,
+      "sha256": "4508fdfd0c08a9faac9da929f7698cb682685b3875c3418e69b55499e728f375",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/scripts/self_test.py": {
+      "bytes": 57871,
+      "sha256": "f114b7d7007d43480b1ecced1dd0a2b6dec0fc5ce055366ddfad846fc023413c",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/scripts/verify_package_manifest.py": {
+      "bytes": 24210,
+      "sha256": "5af1a5d379495e239f93c22955fb14c7ad27b0e32f833df41a235d7861b0af7b",
+      "role": "immutable"
+    },
+    ".agents/skills/yunmom-art-director/scripts/visual_ops.py": {
+      "bytes": 181613,
+      "sha256": "aa61d75a8152f346d08fd664717b2e88dedfda294580dde1beb5d797e60519cf",
+      "role": "immutable"
+    },
+    ".codex/agents/accessibility-safety-critic.toml": {
+      "bytes": 1253,
+      "sha256": "4ba9a169c48fcb72f027518c29c1ffcdd63bfb7808b8b52b72ec6e2c836d89c4",
+      "role": "immutable"
+    },
+    ".codex/agents/brand-guardian.toml": {
+      "bytes": 1077,
+      "sha256": "ad742022e51c163e4808964c2d0ae86a79cd23c294acf975ee1828c15b507d54",
+      "role": "immutable"
+    },
+    ".codex/agents/medical-visual-auditor.toml": {
+      "bytes": 1164,
+      "sha256": "f493f7c3babc76d281074a973798147101cab1e3236093d2dbd7a434094ef4cb",
+      "role": "immutable"
+    },
+    ".codex/agents/production-critic.toml": {
+      "bytes": 1372,
+      "sha256": "11a4cebfa491ca562593881b128c0ab5dee89153f8067579144a0d3ed5023d57",
+      "role": "immutable"
+    },
+    ".codex/agents/visual-critic.toml": {
+      "bytes": 1042,
+      "sha256": "54c4e1b03987a6c6ab7f9a93f63f80db703a5f856b7c7e2c4afe4375b5d3891e",
+      "role": "immutable"
+    },
+    ".codex/config.toml": {
+      "bytes": 63,
+      "sha256": "d4c670da3c2404921a1ab177f4e5405449bc8321d713cc0b42b8046201fd33cc",
+      "role": "immutable"
+    },
+    "00_README.md": {
+      "bytes": 2161,
+      "sha256": "d4d4ffe193bd846c7ced476dcec79550aed56f477facc4383462aba427a282f4",
+      "role": "immutable"
+    },
+    "AGENTS.md": {
+      "bytes": 3451,
+      "sha256": "ff34e3ff85744f8ca66bd6d3de6c123b846139f295fce662b778f2a0aa120bc6",
+      "role": "immutable"
+    },
+    "CODEX_START_HERE.md": {
+      "bytes": 913,
+      "sha256": "6d8c8da3583a04769930631902b5c006aa1171e608f687a1b6e3b78049f636dc",
+      "role": "immutable"
+    },
+    "DESIGN_OPERATING_MODEL.md": {
+      "bytes": 2073,
+      "sha256": "595461dc47929602e8e6052dd925e831c03cdae196904d77a1187bd43715c7e2",
+      "role": "immutable"
+    },
+    "MIGRATION_FROM_V1.md": {
+      "bytes": 1458,
+      "sha256": "da08dd582ddd716700bbe18e265a53983436e27f70ba61875d03ef69435b847b",
+      "role": "immutable"
+    },
+    "V2_DEEP_AUDIT_REPORT.md": {
+      "bytes": 4180,
+      "sha256": "130cfc89a48c7d4e1721d95a62730eca5dc611509cb9dc71b0e2326f00ac567a",
+      "role": "immutable"
+    },
+    "product_baseline_reference/00_README.md": {
+      "bytes": 4411,
+      "sha256": "a576947ec7666d710479b5fd4a285392f4e799696a5de195446a9b1ce2d247a1",
+      "role": "immutable"
+    },
+    "product_baseline_reference/01_YunMom_完整产品设计规格.md": {
+      "bytes": 29983,
+      "sha256": "e805e92966212844e24c55cb60ef4ae2b779759ab168b60d40d2c227561dbc8f",
+      "role": "immutable"
+    },
+    "product_baseline_reference/02_YunMom_完整技术架构.md": {
+      "bytes": 24206,
+      "sha256": "973ba6d7c97da442576fbc07442f0c2813734a3dd5d2b270e0880d5490855b4c",
+      "role": "immutable"
+    },
+    "product_baseline_reference/03_YunMom_形象设计与视觉角色圣经.md": {
+      "bytes": 15772,
+      "sha256": "2dc61aad0b197dfe2e03c7694f0a677daf2ff85f0067126a11a99cedbb4f31da",
+      "role": "immutable"
+    },
+    "product_baseline_reference/04_YunMom_动效与交互规范.md": {
+      "bytes": 8078,
+      "sha256": "cccb7d7b7adc2e33fcc15613152ad6980584c6678685dddc1da8c8550da30c57",
+      "role": "immutable"
+    },
+    "product_baseline_reference/05_YunMom_AI_Skill_OS与人格规范.md": {
+      "bytes": 10063,
+      "sha256": "c9acb1952840ee775aa084c8d88ab2d92295be0a8fb21e03e5a8bc50e1e9a7f3",
+      "role": "immutable"
+    },
+    "product_baseline_reference/06_YunMom_数据隐私安全与异常场景.md": {
+      "bytes": 9130,
+      "sha256": "c4d63b07be2eb4fb665cf11cc032bc01f46cc5722efaeb62a33256e5960d4b9a",
+      "role": "immutable"
+    },
+    "product_baseline_reference/07_YunMom_页面状态矩阵与验收基线.md": {
+      "bytes": 9555,
+      "sha256": "627fe88198042876af64a7e4d033d1b1c3b4328a45e1fe96e87b102bae3bc3df",
+      "role": "immutable"
+    },
+    "visual/candidates/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "seed"
+    },
+    "visual/decisions/DECISION_LOG.md": {
+      "bytes": 423,
+      "sha256": "a870c4d136fdc9de91d7902f03fc4fd5926174e26bd897c7a4b470e84d7ab264",
+      "role": "seed"
+    },
+    "visual/decisions/decision_registry.json": {
+      "bytes": 705,
+      "sha256": "b8834adefd56da531f998277bd3884779f21e68d5020604d537ff677832873f4",
+      "role": "seed"
+    },
+    "visual/derived/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "seed"
+    },
+    "visual/golden/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "seed"
+    },
+    "visual/manifests/asset_registry.json": {
+      "bytes": 331,
+      "sha256": "3a49fe7c6634e1ea4727989644843fe4834f2c84688a3a8dae431c9223329107",
+      "role": "seed"
+    },
+    "visual/manifests/migration_backups/20260810T193904Z-legacy-v2/BACKUP_MANIFEST.json": {
+      "bytes": 617,
+      "sha256": "53b70f45f386ef0c452cca02b15b0e34514c2cf7d174a28cdf792bc852d2e6e0",
+      "role": "seed"
+    },
+    "visual/manifests/migration_backups/20260810T193904Z-legacy-v2/visual/decisions/DECISION_LOG.md": {
+      "bytes": 330,
+      "sha256": "c9831ee4bccb299918ff4cf10689f93fb8930a16441e3b5ed064e3832d42e36b",
+      "role": "seed"
+    },
+    "visual/manifests/migration_backups/20260810T193904Z-legacy-v2/visual/decisions/decision_registry.json": {
+      "bytes": 398,
+      "sha256": "0284b50ba01ceae7a7c871af0b2aba487a92142d923b6d6ffecb271d6a06bec8",
+      "role": "seed"
+    },
+    "visual/manifests/migration_backups/20260810T193904Z-legacy-v2/visual/manifests/asset_registry.json": {
+      "bytes": 59,
+      "sha256": "1ba6fd22bf4bfb04d7e28918d6603992a2b3b5f4bc8379496368c2734569c91d",
+      "role": "seed"
+    },
+    "visual/manifests/migration_backups/20260810T193904Z-legacy-v2/visual/reviews/review_registry.json": {
+      "bytes": 60,
+      "sha256": "5fcebc00dcf1545e35f020d43345f9fd9fe83d74bd7d04462be23811a8fc2f14",
+      "role": "seed"
+    },
+    "visual/manifests/migration_backups/20260810T193904Z-legacy-v2/visual/state/DESIGN_STATE.json": {
+      "bytes": 857,
+      "sha256": "2774458efcea5da3c13b50621e5e2ddf9b8cbc574b38bbffab6c7c77d5a113cc",
+      "role": "seed"
+    },
+    "visual/manifests/visual_program.json": {
+      "bytes": 2458,
+      "sha256": "92899f22475d0af0aa6ea7abcd47838f1f18f1f3026be5206ea77502cd5a1542",
+      "role": "seed"
+    },
+    "visual/production/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "seed"
+    },
+    "visual/prompts/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "seed"
+    },
+    "visual/references/user/yunmom_cloud_pillow_inspiration.png": {
+      "bytes": 1810740,
+      "sha256": "2cc11f6bf92e2f172d9237ce77aed9fe4eed641eaadae67ab270a325e9a0636c",
+      "role": "seed"
+    },
+    "visual/references/user/yunmom_cloud_pillow_inspiration.provenance.json": {
+      "bytes": 1184,
+      "sha256": "701db839c9651d51f62ab6d1c2eb6e6c035cf96f1a2efe6c9c42637c437930b1",
+      "role": "seed"
+    },
+    "visual/rejected/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "seed"
+    },
+    "visual/reviews/.gitkeep": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "seed"
+    },
+    "visual/reviews/review_registry.json": {
+      "bytes": 332,
+      "sha256": "3571f150621fc5b3ed75f9c751691213e4390d55fd2c3549bbd60ff4f77282d6",
+      "role": "seed"
+    },
+    "visual/state/APPROVED_INVARIANTS.md": {
+      "bytes": 2678,
+      "sha256": "765df56ff1fc36e72a0c22dab254f552b255ff7912f791fad7743d3ad419b0b0",
+      "role": "seed"
+    },
+    "visual/state/DESIGN_STATE.json": {
+      "bytes": 919,
+      "sha256": "9f2731cf602c79e9bf331e38615d59737d0710f8957fe245385bdce4d80e534f",
+      "role": "seed"
+    },
+    "visual/system/README.md": {
+      "bytes": 1505,
+      "sha256": "6bffd70b655227ca4f4688d172b84d7f274d462d4a48ef280738c9ceba4df53f",
+      "role": "seed"
+    },
+    "visual/system/STYLE_LOCK_REQUIREMENTS.md": {
+      "bytes": 601,
+      "sha256": "7f136ee70c6cfa8eea8089f84f3d436b93fb654cad8b60898d7e07a9d7e29cfe",
+      "role": "seed"
+    },
+    "visual/system/design_tokens.json": {
+      "bytes": 6416,
+      "sha256": "15a010d1b46ac58b924fe9af7e1b0ec6524137f6b3cb994af97d2a1704e9a1c0",
+      "role": "seed"
+    },
+    "visual/system/design_tokens.schema.json": {
+      "bytes": 9611,
+      "sha256": "71979e62fce6f0843127e6aa86d7b01101af3780dbd1d9acbdec63cfbb978e92",
+      "role": "seed"
+    },
+    "visual/system/quality_rubric.json": {
+      "bytes": 1579,
+      "sha256": "02c0f5ce83f0576ab97044cb232647f980927bfd6257cee4e7e2b53fcb6d57f1",
+      "role": "seed"
+    }
+  }
+}

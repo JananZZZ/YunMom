@@ -1,0 +1,3 @@
+# visual_ops.py, self-test core, and manifest verification use only Python stdlib.
+# Contact-sheet pixels and metadata are regression evidence, so Pillow is pinned.
+Pillow==12.2.0
