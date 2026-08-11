@@ -928,6 +928,8 @@ void _runSelfTests(Map<String, dynamic> plan, Directory root) {
   final items = overlap['work_items'] as List;
   items[0]['status'] = 'verification_pending';
   items[0]['path_claims'] = <String>['docs/planning/**'];
+  items[1]['status'] = 'in_progress';
+  items[1]['path_claims'] = <String>['docs/planning/**'];
   expectError('PATH_OVERLAP', overlap, 'ACTIVE_PATH_OVERLAP');
 
   final expectedMap = _renderProjectMap(plan);

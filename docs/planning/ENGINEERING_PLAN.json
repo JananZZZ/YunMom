@@ -2,7 +2,7 @@
   "schema_version": 1,
   "plan_id": "yunmom-engineering-program",
   "program_version": "1.0.0",
-  "updated_at": "2026-08-11T17:54:00+08:00",
+  "updated_at": "2026-08-11T18:06:00+08:00",
   "release_status": "RELEASE_NOT_APPROVED",
   "current_stage": "M0",
   "authority": [
@@ -171,11 +171,11 @@
   "evidence": [
     {
       "id": "EV-M0-WP01-STRICT-CI",
-      "path": "docs/engineering/SPRINT_0_VERIFICATION.md",
-      "sha256": "04e3cb1de8dbb3e51be188d19dadea5a6a9f2f69494aa5c85fbfe8724f87cba2",
+      "path": "docs/engineering/evidence/M0-WP01_STORAGE_GUARD.md",
+      "sha256": "9746af4f9a9e5bdc8cab858b7e89e09313b12f76b5c6372dcf4da9edc111858d",
       "source_commit": "aedd217fd9f899bc9e0fdb0961c8704ab87ef2a1",
       "build_hash": null,
-      "captured_at": "2026-08-11T17:10:00+08:00",
+      "captured_at": "2026-08-11T17:30:13+08:00",
       "result": "pass",
       "data_class": "no_health_content",
       "reviewer_roles": ["TECH", "QA"]
@@ -222,7 +222,8 @@
         "tool/run_ci.ps1",
         "tool/run_ci.sh",
         "README.md",
-        "docs/engineering/SPRINT_0_VERIFICATION.md"
+        "docs/engineering/SPRINT_0_VERIFICATION.md",
+        "docs/engineering/evidence/M0-WP02_PLANNING_CONTROL.md"
       ],
       "deliverables": [
         "机器可读 ENGINEERING_PLAN",
