@@ -63,6 +63,9 @@ artifacts/
 .codex/tmp/
 .codex/cache/
 
+# Project-local development caches and storage guard evidence
+.local/
+
 # Local research corpus: potentially licensed/medical material is never committed
 # or treated as an approved Rule Pack source. Keep only governance metadata.
 RAG/**/*

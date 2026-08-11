@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "project_local_root": ".local",
+  "paths": {
+    "gradle": "gradle",
+    "pub": "pub",
+    "android_user": "android/user",
+    "android_avd": "android/avd",
+    "temporary": "tmp",
+    "audit": "audit"
+  },
+  "windows_compatibility_paths": {
+    "temporary": "D:/DevCaches/YunMom/tmp"
+  },
+  "limits": {
+    "max_c_drive_growth_mib": 100,
+    "minimum_c_drive_free_gib": 40,
+    "minimum_project_drive_free_gib": 20
+  },
+  "installation_policy": {
+    "new_tools_root": "D:/DevTools",
+    "new_reusable_caches_root": "D:/DevCaches",
+    "allow_c_drive_tool_install": false,
+    "allow_automatic_sdk_component_install": false,
+    "allow_automatic_toolchain_upgrade": false
+  }
+}

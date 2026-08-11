@@ -19,6 +19,8 @@
 - 可复现工具链清单与本地 CI 入口。
 - 严格格式化、分析、四组测试与 Android Debug APK 实际构建均已通过；详见
   `docs/engineering/SPRINT_0_VERIFICATION.md`。
+- 项目级磁盘护栏已建立：依赖、Gradle、Android 用户数据、AVD 与临时文件默认收口到
+  `.local/`，项目脚本监测 C 盘前后变化；详见 `docs/engineering/STORAGE_GUARDRAIL.md`。
 
 ## 身份与迁移说明
 

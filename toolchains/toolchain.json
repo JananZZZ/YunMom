@@ -60,6 +60,11 @@
   "policy": {
     "toolchains_are_global_not_vendored": true,
     "versions_are_pinned_per_release": true,
-    "android_first_does_not_waive_ios_evidence": true
+    "android_first_does_not_waive_ios_evidence": true,
+    "new_tool_install_root": "D:/DevTools",
+    "new_reusable_cache_root": "D:/DevCaches",
+    "project_local_cache_root": ".local",
+    "c_drive_growth_limit_mib": 100,
+    "automatic_toolchain_install_or_upgrade": false
   }
 }

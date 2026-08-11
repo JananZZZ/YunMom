@@ -18,10 +18,12 @@ Android-first、iOS/Android 双端统一合同的 Local-first 孕期照料应用
 在新终端中运行：
 
 ```powershell
-flutter doctor -v
-flutter pub get
-.\tool\run_ci.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\verify_storage_guard.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\run_ci.ps1
 ```
+
+不要直接运行工具链升级或 SDK 自动安装。项目脚本把 YunMom 的 Gradle、Pub、Android
+用户数据、AVD 和临时文件收口到被 Git 忽略的 `.local/`，并监测 C 盘异常增长。
 
 当前启动页只是开发诊断面，不是正式 HOME 或生产视觉。正式 UI 必须等
 G1/G3 Goldens 与 G4 Token Bundle 通过相应治理后再进入生产实现。

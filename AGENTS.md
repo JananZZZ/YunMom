@@ -30,3 +30,12 @@
 ## Quality bar
 
 Produce original, premium, warm, calm, low-pressure YunMom work—not a generic Flutter demo or generic mother-and-baby template. Never call work perfect, medically verified, accessible, production-ready, or release-ready without matching evidence.
+
+## Machine storage safety
+
+- Do not install, upgrade, move, delete, or clean machine-level software, SDKs, emulators, caches, registry entries, environment variables, junctions, or user-profile data without explicit approval for the exact paths and expected disk impact.
+- New reusable development software belongs under `D:/DevTools`; never add a new SDK, IDE, emulator image, or toolchain to `C:`.
+- YunMom-specific dependencies, build caches, Android user data, AVD data, temporary files, diagnostics, and generated artifacts must use the project-local `.local/` boundary or another explicitly approved non-`C:` path.
+- Run Flutter/Dart verification and Android builds through the guarded scripts in `tool/`. Do not run `flutter upgrade`, `sdkmanager --install`, IDE auto-installers, or equivalent download commands as part of ordinary development.
+- Before and after a guarded operation, measure `C:` free space. More than 100 MiB of unexplained growth is a hard stop and must be reported; never auto-delete data to compensate.
+- Read-only disk inspection is allowed. Any machine mutation requires a path list, expected size, rollback plan, and user confirmation first.
