@@ -2,7 +2,7 @@
   "schema_version": 1,
   "plan_id": "yunmom-engineering-program",
   "program_version": "1.0.0",
-  "updated_at": "2026-08-11T18:08:00+08:00",
+  "updated_at": "2026-08-11T18:13:00+08:00",
   "release_status": "RELEASE_NOT_APPROVED",
   "current_stage": "M0",
   "authority": [
@@ -190,6 +190,17 @@
       "result": "pass",
       "data_class": "no_health_content",
       "reviewer_roles": ["TECH", "QA", "PO"]
+    },
+    {
+      "id": "EV-M0-WP03-REMOTE-PREFLIGHT",
+      "path": "docs/engineering/evidence/M0-WP03_REMOTE_PREFLIGHT.md",
+      "sha256": "d8cd2d179961497ddf060abbf719501412c7c613839f0f3da29603d0d80b3af2",
+      "source_commit": "f1e0683c1bbcc07013ac09e9e9248e4e00de2271",
+      "build_hash": null,
+      "captured_at": "2026-08-11T18:12:00+08:00",
+      "result": "blocked",
+      "data_class": "no_health_content",
+      "reviewer_roles": ["TECH", "SEC"]
     }
   ],
   "work_items": [
@@ -253,7 +264,7 @@
       "id": "M0-WP03",
       "stage": "M0",
       "title": "GitHub 私有远端与恢复验证",
-      "status": "ready",
+      "status": "blocked",
       "scope_class": "required",
       "depends_on": ["M0-WP02"],
       "contract_refs": ["SUP-001", "SIGN-001"],
@@ -262,8 +273,13 @@
       "path_claims": [],
       "deliverables": ["GitHub 私有仓库 YunMom", "origin/main 恢复副本"],
       "acceptance": ["Secret/敏感正文/大文件扫描通过", "私有远端推送与只读恢复核验通过"],
-      "evidence_refs": [],
-      "external_gates": ["GitHub 登录与私有仓库创建权限"]
+      "evidence_refs": ["EV-M0-WP03-REMOTE-PREFLIGHT"],
+      "external_gates": ["GitHub 登录与私有仓库创建权限"],
+      "blocker": {
+        "type": "external_authentication",
+        "owner": "USER",
+        "exit_condition": "运行 gh auth login -h github.com，并确认 gh auth status 对预期账号成功后重试 M0-WP03"
+      }
     },
     {
       "id": "M1-WP01",
