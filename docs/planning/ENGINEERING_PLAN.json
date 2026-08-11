@@ -2,9 +2,9 @@
   "schema_version": 1,
   "plan_id": "yunmom-engineering-program",
   "program_version": "1.0.0",
-  "updated_at": "2026-08-11T18:22:00+08:00",
+  "updated_at": "2026-08-11T18:36:00+08:00",
   "release_status": "RELEASE_NOT_APPROVED",
-  "current_stage": "M0",
+  "current_stage": "M1",
   "authority": [
     {
       "kind": "decision_ledger",
@@ -201,6 +201,17 @@
       "result": "blocked",
       "data_class": "no_health_content",
       "reviewer_roles": ["TECH", "SEC"]
+    },
+    {
+      "id": "EV-M0-WP03-PRIVATE-REMOTE",
+      "path": "docs/engineering/evidence/M0-WP03_PRIVATE_REMOTE.md",
+      "sha256": "ac6213d398cdc24ba7ba1db9e1387789d715438c2cf02ed6e4e9849f065d1597",
+      "source_commit": "85a7ba631fb9179027375231128359ee89f6ee65",
+      "build_hash": null,
+      "captured_at": "2026-08-11T18:35:00+08:00",
+      "result": "pass",
+      "data_class": "no_health_content",
+      "reviewer_roles": ["TECH", "SEC"]
     }
   ],
   "work_items": [
@@ -264,7 +275,7 @@
       "id": "M0-WP03",
       "stage": "M0",
       "title": "GitHub 私有远端与恢复验证",
-      "status": "in_progress",
+      "status": "done",
       "scope_class": "required",
       "depends_on": ["M0-WP02"],
       "contract_refs": ["SUP-001", "SIGN-001"],
@@ -273,14 +284,14 @@
       "path_claims": [],
       "deliverables": ["GitHub 私有仓库 YunMom", "origin/main 恢复副本"],
       "acceptance": ["Secret/敏感正文/大文件扫描通过", "私有远端推送与只读恢复核验通过"],
-      "evidence_refs": ["EV-M0-WP03-REMOTE-PREFLIGHT"],
+      "evidence_refs": ["EV-M0-WP03-PRIVATE-REMOTE"],
       "external_gates": []
     },
     {
       "id": "M1-WP01",
       "stage": "M1",
       "title": "V1 Scope 四列表与治理合同",
-      "status": "planned",
+      "status": "ready",
       "scope_class": "required",
       "depends_on": ["M0-WP03"],
       "contract_refs": [
