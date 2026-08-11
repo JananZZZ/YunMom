@@ -2,7 +2,7 @@
   "schema_version": 1,
   "plan_id": "yunmom-engineering-program",
   "program_version": "1.0.0",
-  "updated_at": "2026-08-11T18:06:00+08:00",
+  "updated_at": "2026-08-11T18:08:00+08:00",
   "release_status": "RELEASE_NOT_APPROVED",
   "current_stage": "M0",
   "authority": [
@@ -179,6 +179,17 @@
       "result": "pass",
       "data_class": "no_health_content",
       "reviewer_roles": ["TECH", "QA"]
+    },
+    {
+      "id": "EV-M0-WP02-PLANNING-CONTROL",
+      "path": "docs/engineering/evidence/M0-WP02_PLANNING_CONTROL.md",
+      "sha256": "a9b270f1ec00e0d53e9cca80dfd9cd65b2fb91546630d5c4b7da7659e1a85494",
+      "source_commit": "a0b75e8651ff28b4f4b3d3027128a06ead67d537",
+      "build_hash": null,
+      "captured_at": "2026-08-11T18:06:23+08:00",
+      "result": "pass",
+      "data_class": "no_health_content",
+      "reviewer_roles": ["TECH", "QA", "PO"]
     }
   ],
   "work_items": [
@@ -210,7 +221,7 @@
       "id": "M0-WP02",
       "stage": "M0",
       "title": "工程规划 SSOT、依赖图与追踪矩阵",
-      "status": "verification_pending",
+      "status": "done",
       "scope_class": "required",
       "depends_on": ["M0-WP01"],
       "contract_refs": ["SCP-001", "CHG-001", "SIGN-001"],
@@ -235,14 +246,14 @@
         "依赖无环且状态迁移合法",
         "生成视图与 SSOT 字节一致"
       ],
-      "evidence_refs": [],
+      "evidence_refs": ["EV-M0-WP02-PLANNING-CONTROL"],
       "external_gates": []
     },
     {
       "id": "M0-WP03",
       "stage": "M0",
       "title": "GitHub 私有远端与恢复验证",
-      "status": "planned",
+      "status": "ready",
       "scope_class": "required",
       "depends_on": ["M0-WP02"],
       "contract_refs": ["SUP-001", "SIGN-001"],

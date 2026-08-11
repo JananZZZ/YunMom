@@ -52,6 +52,33 @@ Results:
 The ignored `.local/audit/storage-guard.jsonl` is operational evidence only. Durable evidence is this
 source-bound readback plus the repository scripts and policy in the referenced commit.
 
+## Engineering planning control-plane verification
+
+The planning control-plane implementation is bound to source commit
+`a0b75e8651ff28b4f4b3d3027128a06ead67d537` (`M0-WP02`). The verification was executed after that
+commit, with no engineering-source changes present; concurrent visual-line changes were outside the
+CI input and were not included in the commit.
+
+Command executed on `2026-08-11`:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\run_ci.ps1 -Offline
+```
+
+Results:
+
+- machine plan validation and generated-view drift check: pass;
+- planning negative self-tests: pass for duplicate IDs, unknown contract IDs, dependency cycles,
+  Required deferral, missing done evidence, authority hash drift, visual revision drift and active path
+  overlap;
+- repository format and fatal analysis gates: pass;
+- contract, domain, design-system and app tests: pass;
+- Strict CI observed and persistent `C:` growth: `2.44 MiB`, below the `100 MiB` hard limit;
+- no SDK, IDE, emulator image or toolchain installation/upgrade was performed.
+
+This evidence approves only the local engineering planning controls. It does not approve product
+release or satisfy any MD, LEGAL, SEC, ETHICS or public-device evidence gate.
+
 Run the repository gate from PowerShell without changing the machine-wide execution policy:
 
 ```powershell
